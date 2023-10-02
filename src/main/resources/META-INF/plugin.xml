@@ -15,4 +15,19 @@
     <applicationListeners>
         <listener class="com.github.fanlun007.helloideaplugin.listeners.MyApplicationActivationListener" topic="com.intellij.openapi.application.ApplicationActivationListener"/>
     </applicationListeners>
+    <actions>
+        <action id="HelloActionID" class="com.github.fanlun007.helloideaplugin.actions.HelloAction" text="HelloPlugin">
+            <add-to-group group-id="ToolsMenu" anchor="first"/>
+            <add-to-group group-id="MainToolBar" anchor="last" />
+        </action>
+        <action id="MyCustomActionID" class="com.github.fanlun007.helloideaplugin.actions.OtherProjectWidget"
+                text="My Button Text" icon="com.github.fanlun007.helloideaplugin.icons.SdkIcons.Sdk_default_icon">
+            <add-to-group group-id="MainToolbarCenter" anchor="last" />
+        </action>
+
+        <group id="MainToolbarArtifactGroup">
+            <action id="ProjectToolbarWidgetAction2" class="com.github.fanlun007.helloideaplugin.actions.ProjectToolbarWidgetAction2" />
+            <add-to-group group-id="MainToolbarLeft" relative-to-action="MainToolbarGeneralActionsGroup" anchor="after" />
+        </group>
+    </actions>
 </idea-plugin>

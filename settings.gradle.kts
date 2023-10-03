@@ -1,1 +1,1 @@
-rootProject.name = "hello-idea-plugin"
+rootProject.name = "ArtifactShow"

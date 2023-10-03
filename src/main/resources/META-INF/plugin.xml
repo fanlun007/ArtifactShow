@@ -1,29 +1,36 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
     <id>com.github.fanlun007.helloideaplugin</id>
-    <name>hello-idea-plugin Template</name>
-    <vendor>fanlun007</vendor>
+    <name>ArtifactShow</name>
+    <vendor>Andrew</vendor>
+    <version>1.0.0</version>
 
     <depends>com.intellij.modules.platform</depends>
 
+    <description>
+        <![CDATA[
+         Display your ModuleName in the MainToolbar if the ProjectName is not equal to the ModuleName.
+      ]]>
+    </description>
+
     <resource-bundle>messages.MyBundle</resource-bundle>
 
-    <extensions defaultExtensionNs="com.intellij">
-        <toolWindow factoryClass="com.github.fanlun007.helloideaplugin.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
-    </extensions>
+<!--    <extensions defaultExtensionNs="com.intellij">-->
+<!--        <toolWindow factoryClass="com.github.fanlun007.helloideaplugin.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>-->
+<!--    </extensions>-->
 
     <applicationListeners>
         <listener class="com.github.fanlun007.helloideaplugin.listeners.MyApplicationActivationListener" topic="com.intellij.openapi.application.ApplicationActivationListener"/>
     </applicationListeners>
     <actions>
-        <action id="HelloActionID" class="com.github.fanlun007.helloideaplugin.actions.HelloAction" text="HelloPlugin">
-            <add-to-group group-id="ToolsMenu" anchor="first"/>
-            <add-to-group group-id="MainToolBar" anchor="last" />
-        </action>
-        <action id="MyCustomActionID" class="com.github.fanlun007.helloideaplugin.actions.OtherProjectWidget"
-                text="My Button Text" icon="com.github.fanlun007.helloideaplugin.icons.SdkIcons.Sdk_default_icon">
-            <add-to-group group-id="MainToolbarCenter" anchor="last" />
-        </action>
+<!--        <action id="HelloActionID" class="com.github.fanlun007.helloideaplugin.actions.HelloAction" text="HelloPlugin">-->
+<!--            <add-to-group group-id="ToolsMenu" anchor="first"/>-->
+<!--            <add-to-group group-id="MainToolBar" anchor="last" />-->
+<!--        </action>-->
+<!--        <action id="MyCustomActionID" class="com.github.fanlun007.helloideaplugin.actions.OtherProjectWidget"-->
+<!--                text="My Button Text" icon="com.github.fanlun007.helloideaplugin.icons.SdkIcons.Sdk_default_icon">-->
+<!--            <add-to-group group-id="MainToolbarCenter" anchor="last" />-->
+<!--        </action>-->
 
         <group id="MainToolbarArtifactGroup">
             <action id="ProjectToolbarWidgetAction2" class="com.github.fanlun007.helloideaplugin.actions.ProjectToolbarWidgetAction2" />
